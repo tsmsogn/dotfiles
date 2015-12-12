@@ -1,0 +1,14 @@
+#!/bin/sh
+
+cd $(dirname $0)
+base=$(pwd)
+
+for dotfile in .*; do
+    case $dotfile in
+        .|..|.git|.gitignore)
+        ;;
+    *)
+        ( cd && ln -s -v $base/$dotfile) || true
+        ;;
+    esac
+done
