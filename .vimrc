@@ -1,3 +1,46 @@
+"----------------------------------------
+" 表示設定
+"----------------------------------------
+" 色づけする
+syntax on
+" 改行時にインデントを引き継いで改行する
+set autoindent
+" インデントにつかわれる空白の数
+set shiftwidth=4
+" <Tab>押下時に<Tab>のかわりに<Space>を挿入する
+set expandtab
+" <Tab>が対応する<Space>の数
+set tabstop=4
+" 常にステータスラインを表示する
+set laststatus=2
+" 例)
+" .vimrc #1[utf-8][unix][vim]
+" ".vimrc" 169L, 5660C written
+set statusline=%<%f\ #%n%m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%y%=%l,%c%V%8P
+
+"----------------------------------------
+" 検索
+"----------------------------------------
+" ハイライトサーチを有効にする
+set hlsearch
+" 大文字小文字を区別しない(検索時)
+set ignorecase
+" 大文字を含んでいた場合は大文字小文字を区別する(検索時)
+set smartcase
+
+" 日本語
+set encoding=utf-8
+set fileencodings=utf-8,iso-2022-jp,cp932,sjis,euc-jp
+
+" □や○の文字があってもカーソル位置がずれないようにする
+if exists('&ambiwidth')
+    set ambiwidth=double
+endif
+
+let g:syntastic_mode_map = { 'mode': 'active',
+            \ 'active_filetypes': ['ruby'] }
+let g:syntastic_ruby_checkers = ['rubocop']
+
 "NeoBundle Scripts-----------------------------
 if has('vim_starting')
   if &compatible
@@ -127,20 +170,3 @@ let g:neocomplcache_force_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplcache_force_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-
-syntax on
-set expandtab
-set tabstop=4
-set autoindent
-set shiftwidth=4
-set laststatus=2
-set statusline=%<%f\ #%n%m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%y%=%l,%c%V%8P
-set encoding=utf-8
-set fileencodings=utf-8,iso-2022-jp,sjis,cp932,euc-jp
-if exists('&ambiwidth')
-    set ambiwidth=double
-endif
-
-let g:syntastic_mode_map = { 'mode': 'active',
-            \ 'active_filetypes': ['ruby'] }
-let g:syntastic_ruby_checkers = ['rubocop']
