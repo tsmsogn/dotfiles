@@ -3,20 +3,35 @@
 "----------------------------------------
 " 色づけする
 syntax on
-" 改行時にインデントを引き継いで改行する
-set autoindent
-" インデントにつかわれる空白の数
-set shiftwidth=4
-" <Tab>押下時に<Tab>のかわりに<Space>を挿入する
-set expandtab
-" <Tab>が対応する<Space>の数
-set tabstop=4
 " 常にステータスラインを表示する
 set laststatus=2
 " 例)
 " .vimrc #1[utf-8][unix][vim]
 " ".vimrc" 169L, 5660C written
 set statusline=%<%f\ #%n%m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%y%=%l,%c%V%8P
+
+"----------------------------------------
+" インデント
+"----------------------------------------
+" 改行時にインデントを引き継いで改行する
+set autoindent
+" インデントにつかわれる空白の数
+set shiftwidth=4
+" <Tab>が対応する<Space>の数
+set tabstop=4
+" <Tab>押下時に<Tab>のかわりに<Space>を挿入する
+set expandtab
+
+if has("autocmd")
+  " ファイルタイプの検索を有効にする
+  filetype plugin on
+  " そのファイルタイプにあわせたインデントを利用する
+  filetype indent on
+  " これらのftではインデントを無効に
+  "autocmd FileType php filetype indent off
+
+  autocmd FileType ruby       setlocal sw=2 sts=2 ts=2 et
+end
 
 "----------------------------------------
 " 検索
