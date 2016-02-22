@@ -49,7 +49,7 @@ set fileencodings=utf-8,iso-2022-jp,cp932,sjis,euc-jp
 
 " □や○の文字があってもカーソル位置がずれないようにする
 if exists('&ambiwidth')
-    set ambiwidth=double
+  set ambiwidth=double
 endif
 
 let g:syntastic_mode_map = { 'mode': 'active',
