@@ -5,3 +5,6 @@ set main-view = id date author commit-title:graph=yes,refs=yes
 # default
 # set vertical-split = auto
 set vertical-split = no
+
+# diff of merge commit
+bind diff 7 !git diff %(commit)^ %(commit)
