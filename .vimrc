@@ -85,6 +85,11 @@ NeoBundle 'scrooloose/syntastic'
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
+let g:aoj#user_id = 'tsmsogn'
+NeoBundle 'mopp/AOJ.vim'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'mattn/webapi-vim'
+
 " Required:
 call neobundle#end()
 
