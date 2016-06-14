@@ -12,5 +12,4 @@ set vertical-split = no
 # bind refs ! ?git branch -D %(branch)
 bind refs ! ?git branch -d %(branch)
 
-# diff of merge commit
-bind diff 7 !git diff %(commit)^ %(commit)
+set diff-options = -m --first-parent
