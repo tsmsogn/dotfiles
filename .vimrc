@@ -86,7 +86,6 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
 let g:aoj#user_id = 'tsmsogn'
-let g:api4aoj#can_use_lang_dict = { 'c' : 'C', 'cpp' : 'C++', 'java' : 'JAVA', 'cs' : 'C#','d' : 'D', 'ruby' : 'Ruby', 'python' : 'Python', 'php' : 'PHP', 'js' : 'JavaScript' }
 NeoBundle 'mopp/AOJ.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'mattn/webapi-vim'
