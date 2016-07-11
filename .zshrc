@@ -7,6 +7,11 @@ export LANG=ja_JP.UTF-8
 autoload -U compinit
 compinit
 
+# zmv を有効にする
+autoload -U zmv
+# *は括弧が付いているものとみなす
+alias zmv='noglob zmv -W'
+
 # ヒストリー
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
