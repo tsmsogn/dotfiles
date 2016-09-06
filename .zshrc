@@ -5,6 +5,16 @@ export LANG=ja_JP.UTF-8
 autoload -U compinit
 compinit
 
+# ディレクトリ名だけでcd
+setopt auto_cd
+# cdの履歴を記憶
+setopt auto_pushd
+# 重複したディレクトリを追加しない
+setopt pushd_ignore_dups
+
+# もしかして機能
+setopt correct
+
 # zmv を有効にする
 autoload -U zmv
 # *は括弧が付いているものとみなす
