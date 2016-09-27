@@ -90,6 +90,9 @@ NeoBundle 'mopp/AOJ.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'mattn/webapi-vim'
 
+" Go
+NeoBundle 'fatih/vim-go'
+
 " Required:
 call neobundle#end()
 
