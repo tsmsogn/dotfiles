@@ -9,3 +9,9 @@ export NVM_DIR=$HOME/.nvm
 if which rbenv > /dev/null; then
     eval "$(rbenv init -)";
 fi
+
+export PATH=$HOME/.pyenv/shims:$PATH
+
+if which pyenv > /dev/null; then
+    eval "$(pyenv init -)"; 
+fi
