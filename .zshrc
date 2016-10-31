@@ -1,11 +1,24 @@
-if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
-
 # 環境変数
 export LANG=ja_JP.UTF-8
 
 # 補完機能を有効にする
 autoload -U compinit
 compinit
+
+# ディレクトリ名だけでcd
+setopt auto_cd
+# cdの履歴を記憶
+setopt auto_pushd
+# 重複したディレクトリを追加しない
+setopt pushd_ignore_dups
+
+# もしかして機能
+setopt correct
+
+# zmv を有効にする
+autoload -U zmv
+# *は括弧が付いているものとみなす
+alias zmv='noglob zmv -W'
 
 # ヒストリー
 HISTFILE=~/.zsh_history
