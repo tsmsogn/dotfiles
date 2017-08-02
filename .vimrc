@@ -103,6 +103,10 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
+" PlantUML
+NeoBundle 'aklt/plantuml-syntax'
+let g:plantuml_executable_script = $HOME.'/.plantuml'
+
 " Required:
 call neobundle#end()
 
