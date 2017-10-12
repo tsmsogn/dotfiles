@@ -81,6 +81,8 @@ NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'vim-scripts/Align'
+NeoBundle 'vim-scripts/SQLUtilities'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -92,6 +94,18 @@ NeoBundle 'mattn/webapi-vim'
 
 " Go
 NeoBundle 'fatih/vim-go'
+
+" RSpec
+NeoBundle 'thoughtbot/vim-rspec'
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
+" PlantUML
+NeoBundle 'aklt/plantuml-syntax'
+let g:plantuml_executable_script = $HOME.'/.plantuml'
 
 " Required:
 call neobundle#end()
