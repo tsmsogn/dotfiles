@@ -15,3 +15,6 @@ export PATH=$HOME/.pyenv/shims:$PATH
 if which pyenv > /dev/null; then
     eval "$(pyenv init -)"; 
 fi
+
+# opencv
+export PATH="/usr/local/opt/opencv/bin:$PATH"
