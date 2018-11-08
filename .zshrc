@@ -25,6 +25,10 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
 
+# リダイレクトによる上書きを禁止する
+# 強制的に上書きする場合は、>! >>! もしくは、>| >|| を使う
+setopt noclobber
+
 # プロンプト
 case ${UID} in
 0)
